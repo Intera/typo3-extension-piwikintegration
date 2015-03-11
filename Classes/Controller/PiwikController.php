@@ -5,7 +5,7 @@
  *
  * is the backend controller
  */
-class Tx_Piwikintegration_Controller_PiwikController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class Tx_Piwikintegration_Controller_PiwikController extends Tx_Extbase_MVC_Controller_ActionController {
 	/**
 	 * @var tx_piwikintegration_div
 	 */
@@ -20,7 +20,7 @@ class Tx_Piwikintegration_Controller_PiwikController extends \TYPO3\CMS\Extbase\
 	 * @return void
 	 */
 	public function initializeAction() {
-		$this->id = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
+		$this->id = (int)t3lib_div::_GP('id');
 		$this->piwikHelper = t3lib_div::makeInstance('tx_piwikintegration_div');
 	}
 

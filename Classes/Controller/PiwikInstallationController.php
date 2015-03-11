@@ -5,7 +5,7 @@
  *
  * controller to run the installation of piwik in several seperated steps to avoid timeouts
  */
-class Tx_Piwikintegration_Controller_PiwikInstallationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class Tx_Piwikintegration_Controller_PiwikInstallationController extends Tx_Extbase_MVC_Controller_ActionController {
 	/**
 	 * @var int
 	 */
@@ -15,7 +15,7 @@ class Tx_Piwikintegration_Controller_PiwikInstallationController extends \TYPO3\
 	 * @return void
 	 */
 	public function initializeAction() {
-		$this->id = (int)\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('id');
+		$this->id = (int)t3lib_div::_GP('id');
 	}
 
 	/**
@@ -40,7 +40,7 @@ class Tx_Piwikintegration_Controller_PiwikInstallationController extends \TYPO3\
 	}
 
 	/**
-	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+	 * @throws Tx_Extbase_MVC_Exception_UnsupportedRequestType
 	 * @return void
 	 */
 	public function configureAction() {
@@ -50,7 +50,7 @@ class Tx_Piwikintegration_Controller_PiwikInstallationController extends \TYPO3\
 	/**
 	 * @param $action
 	 * @param $message
-	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+	 * @throws Tx_Extbase_MVC_Exception_UnsupportedRequestType
 	 * @return void
 	 */
 	protected function showAndRedirect($action, $message) {
