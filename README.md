@@ -6,6 +6,14 @@ See why the build is currently failing, most of the issues are CGL things, will 
 
 https://travis-ci.org/kaystrobach/TYPO3.piwikintegration/
 
+# Backport
+
+This is a backport of the current master branch that aims to be compatible with TYPO3 4.5.
+
+If you want to use it you need to use the repository from https://github.com/Intera/TYPO3.CMS/
+and checkout the TYPO3_4-5-allfixes branch which contains some additional view helpers required
+by the backport.
+
 # Updating
 
 ## to 5.x future
